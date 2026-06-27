@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Quinceañera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- Audio -->
+    <audio id="bgMusic" loop>
+        <source src="audio/Veo en ti la luz.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Botón música -->
+    <button class="music-btn" id="musicBtn" title="Música">♪</button>
+
+    <!-- ===== SOBRE SELLADO ===== -->
+    <div class="env-overlay" id="envOverlay">
+        <div class="env" id="env">
+            <div class="env-back"></div>
+            <div class="env-side env-left"></div>
+            <div class="env-side env-right"></div>
+            <div class="env-bottom-tri"></div>
+            <div class="env-glow"></div>
+            <div class="env-flap"></div>
+            <div class="env-seal" id="envSeal">
+                <img src="img/c75d08e7-ffab-47ac-9e5c-9f51ab1e672d-removebg-preview.png" class="seal-img" alt="">
+                <span class="sparkle sp1">✦</span>
+                <span class="sparkle sp2">✦</span>
+                <span class="sparkle sp3">✦</span>
+                <span class="sparkle sp4">✦</span>
+                <span class="sparkle sp5">★</span>
+                <span class="sparkle sp6">✦</span>
+                <span class="sparkle sp7">★</span>
+                <span class="sparkle sp8">✦</span>
+            </div>
+        </div>
+        <p class="env-hint">— Toca el sello para abrir —</p>
+    </div>
+
+    <div class="card">
+
+        <!-- ===== PORTADA / COVER ===== -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-frame">
+                <h1 class="hero-name">DULCE<br>ARACELI</h1>
+                <p class="hero-sub">Mis Quince</p>
+            </div>
+        </section>
+
+        <!-- ===== INVITACIÓN ===== -->
+        <div class="page">
+
+            <!-- Decoración de esquinas -->
+            <div class="corner corner-tl"></div>
+            <div class="corner corner-tr"></div>
+            <div class="corner corner-bl"></div>
+            <div class="corner corner-br"></div>
+
+            <!-- Flores decorativas -->
+            <div class="flowers top-flowers reveal">
+                <span>✿</span><span>❀</span><span>✾</span><span>❀</span><span>✿</span>
+            </div>
+
+            <!-- Encabezado -->
+            <header class="header reveal">
+                <p class="pre-title">Con la bendición de Dios y de nuestros padres</p>
+                <div class="divider"><span>— ✦ —</span></div>
+            </header>
+
+            <!-- Nombre principal -->
+            <section class="main-name reveal">
+                <p class="invitation-text">Te invitamos a celebrar los</p>
+                <h1 class="number">XV</h1>
+                <p class="invitation-text">años de</p>
+                <h2 class="name">Dulce Araceli</h2>
+            </section>
+
+            <div class="divider reveal"><span>✦ ✦ ✦</span></div>
+
+            <!-- Detalles del evento -->
+            <section class="details">
+
+                <div class="detail-block reveal from-left">
+                    <p class="detail-label">Misa de Acción de Gracias</p>
+                    <p class="detail-value">Sábado, 15 de Agosto de 2026</p>
+                    <p class="detail-value">5:00 p.m.</p>
+                    <p class="detail-sub">Parroquia de Nuestra Señora de Guadalupe</p>
+                </div>
+
+                <div class="diamond reveal"><span>◆</span></div>
+
+                <div class="detail-block reveal from-right">
+                    <p class="detail-label">Recepción &amp; Fiesta</p>
+                    <p class="detail-value">8:00 p.m.</p>
+                    <p class="detail-sub">Salón Jardines del Lago<br>Av. Las Flores 452, Col. Primavera</p>
+                </div>
+
+            </section>
+
+            <div class="divider reveal"><span>— ✦ —</span></div>
+
+            <!-- Mensaje especial -->
+            <section class="message reveal">
+                <p class="quote">
+                    &ldquo;Hoy comienzo a escribir el capítulo más hermoso de mi vida,<br>
+                    y quiero que tú seas parte de esta historia.&rdquo;
+                </p>
+                <p class="signed">— Dulce Araceli</p>
+            </section>
+
+            <!-- Flores decorativas inferiores -->
+            <div class="flowers bottom-flowers reveal">
+                <span>✿</span><span>❀</span><span>✾</span><span>❀</span><span>✿</span>
+            </div>
+
+            <!-- Pie -->
+            <footer class="footer reveal">
+                <p>Te esperamos con mucho cariño &nbsp;✦&nbsp; Confirmar asistencia al <strong>(55) 1234-5678</strong></p>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script>
+        // ── Envelope / Sobre ──
+        const envOverlay = document.getElementById('envOverlay');
+        const env        = document.getElementById('env');
+        const envSeal    = document.getElementById('envSeal');
+
+        document.body.style.overflow = 'hidden';
+
+        const bgMusic  = document.getElementById('bgMusic');
+        const musicBtn = document.getElementById('musicBtn');
+
+        musicBtn.addEventListener('click', () => {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                musicBtn.textContent = '♪';
+                musicBtn.classList.remove('paused');
+            } else {
+                bgMusic.pause();
+                musicBtn.textContent = '♩';
+                musicBtn.classList.add('paused');
+            }
+        });
+
+        envSeal.addEventListener('click', () => {
+            // 1. Sello desaparece + solapa se abre
+            env.classList.add('open');
+            bgMusic.volume = 0.7;
+            bgMusic.play().catch(() => {});
+
+            // 2. Sobre cae hacia abajo + carta sube desde adentro
+            setTimeout(() => {
+                envOverlay.classList.add('fall-down');
+                document.querySelector('.card').classList.add('reveal-card');
+                document.body.style.overflow = '';
+                musicBtn.style.display = 'block';
+            }, 850);
+
+            // 3. Quitar overlay del DOM
+            setTimeout(() => {
+                envOverlay.style.display = 'none';
+            }, 2100);
+        });
+
+        const heroBg = document.querySelector('.hero-bg');
+        const card   = document.querySelector('.card');
+
+        // ── Parallax scroll ──
+        function updateParallax() {
+            const scrollY = window.scrollY;
+            heroBg.style.transform = `translateY(${scrollY * 0.45}px) scale(1.15)`;
+        }
+        window.addEventListener('scroll', updateParallax, { passive: true });
+
+        // ── Parallax mouse ──
+        card.addEventListener('mousemove', (e) => {
+            const rect  = card.getBoundingClientRect();
+            const dx    = (e.clientX - rect.left  - rect.width  / 2) / rect.width;
+            const dy    = (e.clientY - rect.top   - rect.height / 2) / rect.height;
+            heroBg.style.transform =
+                `translateY(${window.scrollY * 0.45 + dy * 18}px) translateX(${dx * 14}px) scale(1.15)`;
+        });
+        card.addEventListener('mouseleave', updateParallax);
+
+        // ── Scroll reveal ──
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    // Pequeño retraso escalonado según el orden en el DOM
+                    const delay = entry.target.dataset.delay || 0;
+                    setTimeout(() => entry.target.classList.add('visible'), delay);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        // Asignar retrasos escalonados y observar
+        document.querySelectorAll('.reveal').forEach((el, i) => {
+            el.dataset.delay = i * 120;
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
