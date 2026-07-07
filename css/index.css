@@ -860,22 +860,93 @@ body {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 480px) {
-    body        { padding: 0; }
-    .card       { margin: 0; border-radius: 0; }
-    .hero       { height: 100vh; min-height: 480px; }
-    .hero-name  { font-size: 2.2rem; }
-    .hero-sub   { font-size: 2.4rem; }
-    .hero-frame { padding: 28px 20px 24px; }
-    .page       { padding: 36px 22px 32px; }
-    .number     { font-size: 5.5rem; }
-    .name       { font-size: 3rem; }
-    .countdown-num  { font-size: 3.2rem; }
-    .countdown-sep  { font-size: 3rem; }
-    .countdown-item { min-width: 52px; }
-    .date-day       { font-size: 4rem; }
-    .date-day   { font-size: 4rem; }
-    .countdown-num  { font-size: 3.5rem; }
-    .countdown-sep  { font-size: 3.3rem; }
-    .countdown-item { min-width: 52px; }
+
+/* Tablet */
+@media (max-width: 768px) {
+    .card         { border-radius: 2px; }
+    .page         { padding: 40px 28px 36px; }
+    .hero-frame   { max-width: 300px; padding: 30px 26px 26px; }
+    .hero-name    { font-size: 2.6rem; }
+    .hero-sub     { font-size: 2.6rem; }
+    .number       { font-size: 6rem; }
+    .name         { font-size: 3.3rem; }
+    .detail-block { max-width: 100%; }
+    .date-box     { max-width: 380px; }
+    .countdown-num  { font-size: 3.8rem; }
+    .countdown-sep  { font-size: 3.6rem; }
+    .countdown-item { min-width: 56px; }
+    .date-day       { font-size: 4.8rem; }
+    .confirm-btn    { padding: 13px 44px; }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+    body          { padding: 0; }
+    .card         { margin: 0; border-radius: 0; }
+    .hero         { height: 100svh; min-height: 480px; }
+    .hero-name    { font-size: 2rem; }
+    .hero-sub     { font-size: 2.2rem; }
+    .hero-frame   { padding: 22px 16px 20px; max-width: 260px; }
+    .page         { padding: 36px 20px 32px; }
+
+    .corner       { width: 40px; height: 40px; }
+
+    .opening-phrase       { font-size: 1rem; line-height: 1.85; }
+    .invitation-text-long { font-size: 0.95rem; }
+    .number       { font-size: 5.2rem; }
+    .name         { font-size: 2.8rem; }
+    .invitation-text { font-size: 0.95rem; }
+
+    .parents-names      { font-size: 1.25rem; }
+    .parents-quote      { padding: 16px 16px; }
+    .parents-quote-text { font-size: 0.95rem; }
+
+    .date-box     { padding: 10px 16px; gap: 10px; max-width: 100%; }
+    .date-day     { font-size: 3.8rem; }
+    .date-month,
+    .date-year    { font-size: 0.85rem; letter-spacing: 0.14em; }
+    .countdown-timer  { gap: 2px; }
+    .countdown-num    { font-size: 2.8rem; }
+    .countdown-sep    { font-size: 2.6rem; }
+    .countdown-item   { min-width: 46px; }
+    .countdown-label  { font-size: 0.52rem; letter-spacing: 0.1em; }
+
+    .detail-block { max-width: 100%; padding: 12px 14px; }
+    .detail-label { font-size: 1.6rem; }
+    .detail-value { font-size: 0.95rem; }
+    .detail-sub   { font-size: 0.85rem; }
+
+    .dress-script { font-size: 2rem; }
+    .dress-formal { font-size: 2rem; letter-spacing: 0.14em; }
+    .dress-note   { font-size: 0.9rem; }
+    .gift-message { font-size: 0.95rem; }
+
+    .confirm-title { font-size: 2.2rem; }
+    .confirm-text  { font-size: 1rem; }
+    .confirm-btn   { padding: 12px 32px; font-size: 0.82rem; letter-spacing: 0.2em; }
+
+    .quote        { font-size: 0.92rem; }
+    .signed       { font-size: 1.4rem; }
+    .footer       { font-size: 0.82rem; }
+
+    .music-btn    { width: 42px; height: 42px; font-size: 1.1rem; bottom: 16px; right: 16px; }
+
+    .env-seal,
+    .seal-img     { width: 120px; height: 120px; }
+}
+
+/* Móvil pequeño */
+@media (max-width: 380px) {
+    .page         { padding: 30px 16px 28px; }
+    .hero-name    { font-size: 1.75rem; }
+    .hero-sub     { font-size: 1.9rem; }
+    .number       { font-size: 4.5rem; }
+    .name         { font-size: 2.4rem; }
+    .date-day     { font-size: 3.2rem; }
+    .countdown-num    { font-size: 2.3rem; }
+    .countdown-sep    { font-size: 2.1rem; }
+    .countdown-item   { min-width: 38px; }
+    .flowers      { font-size: 1rem; letter-spacing: 6px; }
+    .opening-phrase   { font-size: 0.92rem; }
+    .confirm-btn  { padding: 11px 26px; }
 }
